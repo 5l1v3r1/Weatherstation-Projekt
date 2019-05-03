@@ -81,7 +81,7 @@ for x in ids:
   requests.get(test)
   MESSAGE= "Das Wetter in:  " + payload + "\n" +link
   subprocess.call([
-     'curl', '-s', '-X', 'POST' ,'https://api.telegram.org/bot801094352:AAF_fEESoQC_aNHEKLpAhOhPcmYhTZ7cX8k/sendMessage', '-d' ,'chat_id=@Wetterstation_projekt' , '-d', 'text=' + MESSAGE 
+     'curl', '-s', '-X', 'POST' ,'https://api.telegram.org/bot801094352:AAF_fEESoQC_aNHEKLpAhOhPcmYhTZ7cX8k/sendMessage', '-d' ,'chat_id=' , '-d', 'text=' + MESSAGE 
   ])
 
 
