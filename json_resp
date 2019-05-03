@@ -1,0 +1,42 @@
+{
+    "base": "stations", 
+    "clouds": {
+        "all": 40
+    }, 
+    "cod": 200, 
+    "coord": {
+        "lat": 49.13, 
+        "lon": 10.07
+    }, 
+    "dt": 1556741151, 
+    "id": 2939797, 
+    "main": {
+        "humidity": 66, 
+        "pressure": 1013, 
+        "temp": 284.98, 
+        "temp_max": 287.15, 
+        "temp_min": 282.04
+    }, 
+    "name": "Crailsheim", 
+    "sys": {
+        "country": "DE", 
+        "id": 1833, 
+        "message": 0.0089, 
+        "sunrise": 1556683149, 
+        "sunset": 1556735663, 
+        "type": 1
+    }, 
+    "visibility": 10000, 
+    "weather": [
+        {
+            "description": "scattered clouds", 
+            "icon": "03n", 
+            "id": 802, 
+            "main": "Clouds"
+        }
+    ], 
+    "wind": {
+        "deg": 180, 
+        "speed": 0.5
+    }
+}
