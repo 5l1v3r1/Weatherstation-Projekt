@@ -5,9 +5,6 @@ import subprocess
 import sys
 import time
  
-subprocess.call(['rm', '/var/www/html/log.html'])
-subprocess.call(['touch','/var/www/html/log.html'])
-subprocess.call(['chmod','777', '/var/www/html/log.html'])
 
 html_start_payload = '''
 <html>
@@ -15,7 +12,8 @@ html_start_payload = '''
 <style>
 
 body{
-background-color:blue;
+color:white;
+background-color:black;
 
 }
 </style>
@@ -25,10 +23,18 @@ background-color:blue;
 
 html_end_payload = '</body></html>'
 
+
+
 ids=['2950159','2835481','2939797','2825297','2911298','2907911','2886242']
 
 start = 'http://localhost/test.php?c=' + html_start_payload +'<br>'
 requests.get(start)  
+
+
+
+
+  
+
 
 for x in ids:
   api='https://api.openweathermap.org/data/2.5/weather?id='+ x + '&appid=2182e55fa2ce21a9bfe7d4629391fc8e'
@@ -72,8 +78,11 @@ for x in ids:
   requests.get(test)
   MESSAGE= "Das Wetter in:  " + payload + "\n" +link
   subprocess.call([
-     'curl', '-s', '-X', 'POST' ,'https://api.telegram.org/bot801094352:AAF_fEESoQC_aNHEKLpAhOhPcmYhTZ7cX8k/sendMessage', '-d' ,'chat_id=' , '-d', 'text=' + MESSAGE 
+     'curl', '-s', '-X', 'POST' ,'https://api.telegram.org/bot801094352:AAF_fEESoQC_aNHEKLpAhOhPcmYhTZ7cX8k/sendMessage', '-d' ,'chat_id=@Wetterstation_projekt' , '-d', 'text=' + MESSAGE 
   ])
+
+
+
 
 end = 'http://localhost/test.php?c=' + html_end_payload
 requests.get(end)
