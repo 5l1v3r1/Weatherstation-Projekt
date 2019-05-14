@@ -24,16 +24,10 @@ background-color:black;
 html_end_payload = '</body></html>'
 
 
-
 ids=['2950159','2835481','2939797','2825297','2911298','2907911','2886242']
 
 start = 'http://localhost/test.php?c=' + html_start_payload +'<br>'
 requests.get(start)  
-
-
-
-
-  
 
 
 for x in ids:
@@ -53,7 +47,7 @@ for x in ids:
   min=json_mindestwaerme -273.15
   max=json_maxwaerme -273.15
   payload = json_name +"\n"
-  html_payload = '<div class="'+ x + '">'  + '<p>'+ json_name +"\n" +'<br>'
+  html_payload = '<div id="id'+ x + '">'  + '<p>'+ json_name +"\n" +'<br>'
 
   payload += "Luftfeuchtigkeit: "+str(json_luftfeuchtigkeit)+"%\n" 
   html_payload += "Luftfeuchtigkeit: "+str(json_luftfeuchtigkeit)+"%\n" +'<br>'
